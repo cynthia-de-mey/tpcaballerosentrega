@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div>
+    <section>
+         <h2 class="section-titles">CREDITOS</h2>
+        <div class="creditos-flex-container">
+            <div class="creditos">
+                
+                <div class="miembro">
+                    <img src="{{ url_for('static', filename='img/demey.png') }}" alt="Cynthia De Mey" class="foto-miembro" width="200">
+                    <p class="nombre-miembro">Cynthia De Mey</p>
+                    <p class="nombre-miembro">Desarrollo</p>
+                </div>
+
+                <div class="miembro">
+                    <img src="{{ url_for('static', filename='img/ferreiro.png') }}" alt="Mariana Ferreiro" class="foto-miembro" width="200">
+                    <p class="nombre-miembro">Mariana Ferreiro</p>
+                    <p class="nombre-miembro">Desarrollo</p>
+                </div>
+
+                <div class="miembro">
+                    <img src="{{ url_for('static', filename='img/soto.png') }}" alt="Martin Soto" class="foto-miembro" width="200">
+                    <p class="nombre-miembro">Martin Soto</p>
+                    <p class="nombre-miembro">Desarrollo</p>
+                </div>
+
+                <div class="miembro">
+                    <img src="{{ url_for('static', filename='img/nieto.png') }}" alt="Luis Nieto" class="foto-miembro" width="200">
+                    <p class="nombre-miembro">Luis Nieto</p>
+                    <p class="nombre-miembro">Diseño</p>
+                </div>
+
+            </div>          
+        </div> 
+    </section>
+      <div class="volver-centro">
+                <a href="{{ url_for('index') }}" class="link-volver">← Volver al Inicio</a>
+            </div>
+</div>
+{% endblock %}
+

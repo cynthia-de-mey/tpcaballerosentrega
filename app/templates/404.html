@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div class="main-container error-page">
+    <section class="presentacion-error">
+    
+   <div class="detalle-flex-container">
+        <div class="error-404">
+            <img src="{{url_for('static',filename='img/404/404.jpg')}}" 
+                 alt="" width="500px">
+                 <a class="boton-ver" href="{{ url_for('index') }}">Volver al Inicio</a>
+        </div>
+        
+    </section>
+</div>
+{% endblock %}

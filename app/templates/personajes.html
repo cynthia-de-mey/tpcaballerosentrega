@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<main class="main-container">
+    <h2 class="section-title">
+        {% if request.args.get('categoria') %}
+            Caballeros de {{ request.args.get('categoria') }}
+        {% elif request.args.get('q') %}
+            Resultados para "{{ request.args.get('q') }}"
+        {% else %}
+            Todos los Personajes
+        {% endif %}
+    </h2>
+
+    {% if personajes %}
+        {% include 'tarjetas.html' %}
+    {% else %}
+        <p class="noper">No se encontraron personajes.</p>
+    {% endif %}
+   <div class="volver-centro">
+    {% if request.args.get('categoria') %}
+        <a href="{{ url_for('categorias') }}" class="link-volver">← Volver a Categorías</a>
+    {% else %}
+        <a href="{{ url_for('index') }}" class="link-volver">← Volver al Inicio</a>
+    {% endif %}
+</div>
+
+</main>
+{% endblock %}
